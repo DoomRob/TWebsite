@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../CSS/animations.css"> 
+    <title>Animations</title>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <ul class="navigation" class="page-container">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="XML.html">XMLHttpRequest</a></li>
+            <li><a href="contact-form.html">Contact Form</a></li>
+            <li><a href="animations.html">Animations</a></li>
+        </ul> 
+    </header>
+    <h2>Animations & Transitions</h2>
+
+        <main>
+            <section class="transition-links">
+                <a href="https://www.w3schools.com/css/css3_transitions.asp">Click to see more!</a>
+            </section>
+
+            <section class="transition-classes">
+                <p>
+                    <button class="trigger">Change the target</button>
+                </p>
+                <div class="button">
+                    <p>A Box</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="animation"></div>
+            </section>
+        </main>
+
+    <script>
+        const trigger = document.querySelector('.trigger');
+        const button = document.querySelector('.button');
+
+        trigger.addEventListener('click', changeButton);
+
+        function changeButton() {
+            button.classList.toggle('active-button');
+        }
+    </script>
+</body>
+</html>

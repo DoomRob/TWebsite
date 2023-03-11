@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color:#74728c;
+}
+h1 {
+    margin-bottom: 0;
+    padding: 0.25;
+    font-size: 3em;
+    font-weight: 400;
+    font-family: "Times New Roman", Courier, monospace;
+    border: 4px solid sliver;
+    background-color: #0aa3d687;
+}
+h2 {
+    padding: .25em;
+    font-style: Bold;
+    font-size: 1.5;
+    background-color: #f0e6f5;
+}
+p {
+    color: #555;
+    font-family: "Arial", Arial, Helvetica, sans-serif;
+}
+h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2, h3, h4 {
+    color: #08ef96;
+}
+h3{
+    border-bottom: solid 1px #03f5b0;
+    padding-bottom: .25;
+}
+ul {
+    list-style-type: square;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+ol {
+    list-style-type: upper-roman;
+}
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+.highlight {
+    color: #0025f9;
+}
+.introduction {
+    font-size: 1.5em;
+    color: #04afe8;
+    font-style: italic;
+}
+a:link {
+    color: #00c81e;
+}
+a:visited {
+    color: #0c92ec;
+}
+a:hover {
+    color: #339900;
+}
+.navigation {
+    font-size: 1.5 em;
+    color: #4b07f6;
+    font-style: Italic;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:#D9EECE;
+    border: solid #0b2af6;
+    border: 0px 1px 1px 1px;
+    display: flex;
+}
+.navigation a {
+    text-decoration: none;
+    color: #feffff;
+    font-weight: bold;
+    display: block;
+    padding: 0.75em 1em;
+}
+.navigation a:hover {
+    background-color: #0cf0f0;
+}
+/* Contact Form */
+label, input, textarea {
+    display: block;
+    width: 50%;
+    box-sizing: border-box;
+}
+form {
+    width: 30em;
+}
+.form-control {
+    margin-bottom: 1em;
+}
+textarea {
+    min-height: 10em;
+}
+.form-control input, .form-control textarea {
+    padding: 0.5em;
+}
+aside {
+    flex: 5;
+    margin-left: 125px;
+    background-color: rgba(255, 255, 255, 0.829);
+}
+main {
+    padding: 2 em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2 em;
+}
+article {
+    text-align: center;
+    margin: 0.5px;
+    background-color: rgba(0, 127, 195, 0.837);
+}
+/* Used for the CSS Animations*/
+.transitions-classes {
+    flex-direction: column;
+}
+.transitions-links,
+.transitions-classes {
+    border: 1px solid #8d2323;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aniButton {
+    padding: 3em;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 2em;
+    background-color: green;
+}
+.active-aniButton {
+    font-size: 3em;
+    background-color: green;
+}
+/* Used for the HTML Canvas */
+#googleMap {
+    height:400px;
+    width: 99%;
+    border: solid .5em;
+}
+#canvas {
+    border: 1px solid rgb(209, 234, 14);
+    background-color: greenyellow;
+}
+/* Used for the Gallery */
+.column {
+    float: left;
+    width: 30.0%;
+    padding: 5px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+* {
+    box-sizing: border-box;
+}
+/* Used for Moblie Phones */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* used for tablets */
+    .col-s-1 {width: 8.33%;}
+}

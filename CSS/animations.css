@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    color:#74728c;
+}
+h1 {
+    margin-bottom: 0;
+    padding: 0.25;
+    font-size: 3em;
+    font-weight: 400;
+    font-family: "Times New Roman", Courier, monospace;
+    border: 4px solid sliver;
+    background-color: #0aa3d687;
+}
+h2 {
+    padding: .25em;
+    font-style: Bold;
+    font-size: 1.5;
+    background-color: #f0e6f5;
+}
+p {
+    color: #555;
+    font-family: "Arial", Arial, Helvetica, sans-serif;
+}
+h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2, h3, h4 {
+    color: #08ef96;
+}
+h3{
+    border-bottom: solid 1px #03f5b0;
+    padding-bottom: .25;
+}
+ul {
+    list-style-type: square;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+ol {
+    list-style-type: upper-roman;
+}
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+.highlight {
+    color: #0025f9;
+}
+.introduction {
+    font-size: 1.5em;
+    color: #04afe8;
+    font-style: italic;
+}
+a:link {
+    color: #00c81e;
+}
+a:visited {
+    color: #0c92ec;
+}
+a:hover {
+    color: #339900;
+}
+.navigation {
+    font-size: 1.5 em;
+    color: #4b07f6;
+    font-style: Italic;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:#D9EECE;
+    border: solid #0b2af6;
+    border: 0px 1px 1px 1px;
+    display: flex;
+}
+.navigation a {
+    text-decoration: none;
+    color: #feffff;
+    font-weight: bold;
+    display: block;
+    padding: 0.75em 1em;
+}
+.navigation a:hover {
+    background-color: #0cf0f0;
+}
+/* Used for the CSS Animations*/
+.transition-links,
+.transition-classes {
+    border: 1px solid #cc0505;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.transition-classes {
+    flex-direction: column;
+}
+a {
+    padding: 3em;
+    text-decoration: none;
+    color: #000;
+    border-radius: 8px;
+    transition: background-color 2s ease-in-out, color 2s ease;
+}
+/* Style for the link when hovered */
+a:hover {
+    background-color: #D65600;
+    color: #deba097a;
+}
+/* 2. Transitioning triggered by JavaScript */
+.button {
+    padding: 3em;
+    color: #01f92a9c;
+    border-radius: 16px;
+    font-size: 2em;
+    background-color: #18711b;
+}
+.active-button {
+    font-size: 3em;
+    background-color: #2dd232;
+    transition-delay: 2s;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 119, 0);
+    transition: width 2s, height 4s;
+    transition-delay: 1s;
+  }
+.animation {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    animation-name: first;
+    animation: first 4s linear 2s infinite alternate;
+    animation-delay: 2s;
+}
+@keyframes first {
+    0% {background-color:blue; left: 200px; top:0px;}
+    50% {background-color:red; left:200px; top:0px;}
+    100% {background-color: orange; left:200px; top:0px;}
+}

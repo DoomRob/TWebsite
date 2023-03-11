@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../CSS/style.css"> 
+    <title>XMLHttpRequest</title>
+</head>
+<style>
+    table,th,td {
+      border : 1px solid black;
+      border-collapse: collapse;
+    }
+    th,td {
+      padding: 5px;
+    }
+</style>
+<body>
+    <body>
+        <div class = "page-container">
+            <header>
+                <h1>My Website</h1>
+                <ul class="navigation">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="map.html">Map</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="XML.html">XMLHttpRequest</a></li>
+                    <li><a href="contact-form.html">Contact Form</a></li>
+                    <li><a href="animations.html">Animations</a></li>
+                </ul> 
+            </header>
+        </div>
+
+        <h2>Musicians that I listen to</h2>
+
+        <button type="button" onclick="loadDoc()">Show</button>
+        <br><br>
+        <table id="demo"></table>       
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        function loadDoc() {
+        $.ajax({
+        url: "../XML/musicians.xml",
+        type: "GET",
+        dataType: "xml",
+            success: function(xml) {
+             myFunction(xml);
+            }
+        });
+    }
+
+        function myFunction(xml) {
+        var table="<tr><th>Artist</th><th>Genre</th><th>Begin</th><th>Country</th><th>Albums</th></tr>";
+        $(xml).find("LISTEN").each(function(){
+        table += "<tr><td>" +
+        $(this).find("ARTIST").text() +
+        "</td><td>" +
+        $(this).find("GENRE").text() +
+        "</td><td>" +
+        $(this).find("BEGIN").text() +
+        "</td><td>" +
+        $(this).find("COUNTRY").text() +
+        "</td><td>" +
+        $(this).find("ALBUMS").text() +
+        "</td></tr>";
+        });
+        $("#demo").html(table);
+    }
+        </script>
+</body>
+</html>
